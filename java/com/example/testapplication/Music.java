@@ -1,11 +1,11 @@
 package com.example.testapplication;
 
-import java.io.FileDescriptor;
-import java.io.IOException;
-
 import android.content.res.AssetFileDescriptor;
 import android.media.MediaPlayer;
 import android.media.MediaPlayer.OnCompletionListener;
+
+import java.io.FileDescriptor;
+import java.io.IOException;
 
 public class Music implements OnCompletionListener{
 	MediaPlayer mediaPlayer;

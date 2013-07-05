@@ -1,9 +1,5 @@
 package com.example.testapplication;
 
-import java.util.ArrayList;
-
-import android.R.string;
-
 public class Contact {
 	private String _id;
 	private String _displayName;

@@ -46,4 +46,14 @@
             android:layout_alignLeft="@+id/btnCamera"
             android:layout_alignRight="@+id/btnCamera"
             android:onClick="startWebsite"/>
+
+    <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Contacts"
+            android:id="@+id/btnContacts"
+            android:layout_below="@+id/btnWebsite"
+            android:layout_alignLeft="@+id/btnWebsite"
+            android:layout_alignRight="@+id/btnWebsite"
+            android:onClick="startContacts"/>
 </RelativeLayout>

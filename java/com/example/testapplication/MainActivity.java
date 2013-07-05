@@ -38,5 +38,11 @@ public class MainActivity extends Activity {
         Intent intent = new Intent(this, WebActivity.class);
         startActivity(intent);
     }
+
+    /** Called when the user clicks the Contacts button */
+    public void startContacts(View view) {
+        Intent intent = new Intent(this, ContactListActivity.class);
+        startActivity(intent);
+    }
     
 }

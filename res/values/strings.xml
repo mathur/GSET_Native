@@ -8,11 +8,12 @@
     <string name="title_activity_music_player">Music Player</string>
     <string name="title_activity_about">About</string>
     <string name="title_activity_web">Website</string>
-    <string name="hello">Hello World, PhotoIntentActivity!</string>
+    <string name="hello">Hello World!</string>
     <string name="btnIntend">Take Picture</string>
     <string name="btnIntendV">Take Video</string>
     <string name="cannot">Cannot</string>
     <string name="album_name">CameraSample</string>
     <string name="title_activity_photo">Camera</string>
     <string name="action_reload">Refresh</string>
+    <string name="title_activity_contact">Contacts</string>
 </resources>

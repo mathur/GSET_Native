@@ -54,9 +54,18 @@
                     android:name="android.support.PARENT_ACTIVITY"
                     android:value="com.example.testapplication.MainActivity" />
         </activity>
+        <activity
+                android:name="com.example.testapplication.ContactListActivity"
+                android:label="@string/title_activity_contact"
+                android:parentActivityName="com.example.testapplication.MainActivity" >
+            <meta-data
+                    android:name="android.support.PARENT_ACTIVITY"
+                    android:value="com.example.testapplication.MainActivity" />
+        </activity>
     </application>
     <uses-feature android:name="android.hardware.camera" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.READ_CONTACTS"/>
 </manifest>

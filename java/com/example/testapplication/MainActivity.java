@@ -14,34 +14,44 @@ public class MainActivity extends Activity {
         setContentView(R.layout.activity_main);
     }
 
-    /** Called when the user clicks the Music Player button */
+    /**
+     * Called when the user clicks the Music Player button
+     */
     public void startMusicPlayer(View view) {
         Intent intent = new Intent(this, MyMediaPlayerActivity.class);
         startActivity(intent);
     }
 
-    /** Called when the user clicks the About button */
+    /**
+     * Called when the user clicks the About button
+     */
     public void startAbout(View view) {
         Intent intent = new Intent(this, About.class);
         startActivity(intent);
     }
 
-    /** Called when the user clicks the Camera button */
+    /**
+     * Called when the user clicks the Camera button
+     */
     public void startCamera(View view) {
         Intent intent = new Intent(this, PhotoIntentActivity.class);
         startActivity(intent);
     }
 
-    /** Called when the user clicks the Website button */
+    /**
+     * Called when the user clicks the Website button
+     */
     public void startWebsite(View view) {
         Intent intent = new Intent(this, WebActivity.class);
         startActivity(intent);
     }
 
-    /** Called when the user clicks the Contacts button */
+    /**
+     * Called when the user clicks the Contacts button
+     */
     public void startContacts(View view) {
         Intent intent = new Intent(this, ContactListActivity.class);
         startActivity(intent);
     }
-    
+
 }

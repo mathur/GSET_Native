@@ -22,11 +22,11 @@ import android.widget.Toast;
 public class WebActivity extends Activity {
 
     protected FrameLayout webViewPlaceholder;
-	protected WebView webView;
-	protected View gsetWebview;
-	protected ViewGroup parentViewGroup;
+    protected WebView webView;
+    protected View gsetWebview;
+    protected ViewGroup parentViewGroup;
 
-    ProgressBar loadingProgressBar,loadingTitle;
+    ProgressBar loadingProgressBar, loadingTitle;
 
     String urlGSET = "http://soe.rutgers.edu/gset";
     String linkDomain = "soe.rutgers.edu/gset";
@@ -38,49 +38,47 @@ public class WebActivity extends Activity {
 
         setContentView(R.layout.state_preserving_impl);
 
-		// Initialize the UI
-		initUI();
-	}
+        // Initialize the UI
+        initUI();
+    }
 
-    protected void initUI()
-	{
-		// Retrieve UI elements
-		webViewPlaceholder = ((FrameLayout)findViewById(R.id.webViewPlaceholder));
-	
-		// Initialize the WebView if necessary
-		if (gsetWebview == null)
-		{
-			// Create the webview
+    protected void initUI() {
+        // Retrieve UI elements
+        webViewPlaceholder = ((FrameLayout) findViewById(R.id.webViewPlaceholder));
+
+        // Initialize the WebView if necessary
+        if (gsetWebview == null) {
+            // Create the webview
             setContentView(R.layout.website_main);
-        	gsetWebview = (View) findViewById(R.id.gsetWebview);
-            parentViewGroup = (ViewGroup)gsetWebview.getParent();
-			webView = (WebView) findViewById(R.id.webview);
-			webView.getSettings().setSupportZoom(false);
-			webView.getSettings().setBuiltInZoomControls(false);
-			webView.setScrollBarStyle(WebView.SCROLLBARS_OUTSIDE_OVERLAY);
-			webView.setScrollbarFadingEnabled(true);
-			webView.getSettings().setLoadsImagesAutomatically(true);
+            gsetWebview = (View) findViewById(R.id.gsetWebview);
+            parentViewGroup = (ViewGroup) gsetWebview.getParent();
+            webView = (WebView) findViewById(R.id.webview);
+            webView.getSettings().setSupportZoom(false);
+            webView.getSettings().setBuiltInZoomControls(false);
+            webView.setScrollBarStyle(WebView.SCROLLBARS_OUTSIDE_OVERLAY);
+            webView.setScrollbarFadingEnabled(true);
+            webView.getSettings().setLoadsImagesAutomatically(true);
             webView.getSettings().setPluginsEnabled(true);
             webView.getSettings().setJavaScriptEnabled(true);
             webView.getSettings().setDatabaseEnabled(true);
             webView.getSettings().setDomStorageEnabled(true);
             webView.getSettings().setAppCacheEnabled(true);
             webView.getSettings().setCacheMode(WebSettings.LOAD_NO_CACHE);
-            
+
             // Enable downloads of files within webView
             webView.setDownloadListener(new DownloadListener() {
                 public void onDownloadStart(String url, String userAgent,
-                        String contentDisposition, String mimetype,
-                        long contentLength) {
-                  Intent i = new Intent(Intent.ACTION_VIEW);
-                  i.setData(Uri.parse(url));
-                  startActivity(i);
+                                            String contentDisposition, String mimetype,
+                                            long contentLength) {
+                    Intent i = new Intent(Intent.ACTION_VIEW);
+                    i.setData(Uri.parse(url));
+                    startActivity(i);
                 }
             });
 
 
-			// Attach the ProgressBar layout
-            loadingProgressBar=(ProgressBar)findViewById(R.id.progressbar_Horizontal);
+            // Attach the ProgressBar layout
+            loadingProgressBar = (ProgressBar) findViewById(R.id.progressbar_Horizontal);
 
             webView.setWebChromeClient(new WebChromeClient() {
 
@@ -94,78 +92,74 @@ public class WebActivity extends Activity {
 
                     // hide the progress bar if the loading is complete
                     if (newProgress == 100) {
-                    loadingProgressBar.setVisibility(View.GONE);
-                    } else{
-                    loadingProgressBar.setVisibility(View.VISIBLE);
+                        loadingProgressBar.setVisibility(View.GONE);
+                    } else {
+                        loadingProgressBar.setVisibility(View.VISIBLE);
                     }
                 }
-                
-            });   
+
+            });
 
             webView.setWebViewClient(new WebViewClient() {
-            
-		        @Override
-		        public boolean shouldOverrideUrlLoading(WebView view, String url) {
+
+                @Override
+                public boolean shouldOverrideUrlLoading(WebView view, String url) {
 
 
-	                // If the site/domain matches, do not override; let myWebView load the page
-		            if (Uri.parse(url).getHost().equals(linkDomain)) {
-		                return false;
-		            }
+                    // If the site/domain matches, do not override; let myWebView load the page
+                    if (Uri.parse(url).getHost().equals(linkDomain)) {
+                        return false;
+                    }
 
-		            // Otherwise, the link is not for a page on my site, so launch another Activity that handles URLs
-		            Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
-		            startActivity(intent);
-		            return true;
-		        }
+                    // Otherwise, the link is not for a page on my site, so launch another Activity that handles URLs
+                    Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
+                    startActivity(intent);
+                    return true;
+                }
 
-            
-	        });
-	        
-			// Load the first page
-			webView.loadUrl(urlGSET);
 
-		}
-		parentViewGroup.removeView(gsetWebview);
-		// Attach the WebView to its placeholder
-		parentViewGroup.addView(gsetWebview);
-	}
+            });
 
-	@Override
-	public void onConfigurationChanged(Configuration newConfig)
-	{
-		super.onConfigurationChanged(newConfig);
+            // Load the first page
+            webView.loadUrl(urlGSET);
 
-		if (webView != null)
-		{
-			// Remove the WebView from the old placeholder
-			parentViewGroup.removeView(gsetWebview);
-		}
+        }
+        parentViewGroup.removeView(gsetWebview);
+        // Attach the WebView to its placeholder
+        parentViewGroup.addView(gsetWebview);
+    }
 
-		// Load the layout resource for the new configuration
+    @Override
+    public void onConfigurationChanged(Configuration newConfig) {
+        super.onConfigurationChanged(newConfig);
+
+        if (webView != null) {
+            // Remove the WebView from the old placeholder
+            parentViewGroup.removeView(gsetWebview);
+        }
+
+        // Load the layout resource for the new configuration
         setContentView(R.layout.state_preserving_impl);
 
-		// Reinitialize the UI
-		initUI();
-	}
+        // Reinitialize the UI
+        initUI();
+    }
 
-	@Override
-	protected void onSaveInstanceState(Bundle outState)
-	{
-		super.onSaveInstanceState(outState);
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
 
-		// Save the state of the WebView
-		webView.saveState(outState);
-	}
+        // Save the state of the WebView
+        webView.saveState(outState);
+    }
 
-	@Override
-	protected void onRestoreInstanceState(Bundle savedInstanceState)
-	{
-		super.onRestoreInstanceState(savedInstanceState);
+    @Override
+    protected void onRestoreInstanceState(Bundle savedInstanceState) {
+        super.onRestoreInstanceState(savedInstanceState);
 
-		// Restore the state of the WebView
-		webView.restoreState(savedInstanceState);
-	}
+        // Restore the state of the WebView
+        webView.restoreState(savedInstanceState);
+    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -181,8 +175,8 @@ public class WebActivity extends Activity {
 
             case R.id.action_reload:
                 Toast.makeText(getApplicationContext(),
-                "Reloading web page",
-                Toast.LENGTH_LONG).show();
+                        "Reloading web page",
+                        Toast.LENGTH_LONG).show();
                 webView.reload();
                 break;
 
@@ -193,11 +187,11 @@ public class WebActivity extends Activity {
         return true;
     }
 
-    public void onBackPressed (){
+    public void onBackPressed() {
         if (webView.isFocused() && webView.canGoBack()) {
-                webView.goBack();       
-        }else {
-                WebActivity.this.finish();
+            webView.goBack();
+        } else {
+            WebActivity.this.finish();
         }
     }
 

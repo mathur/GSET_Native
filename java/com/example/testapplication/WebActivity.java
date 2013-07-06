@@ -26,7 +26,7 @@ public class WebActivity extends Activity {
     protected View gsetWebview;
     protected ViewGroup parentViewGroup;
 
-    ProgressBar loadingProgressBar, loadingTitle;
+    ProgressBar loadingProgressBar;
 
     String urlGSET = "http://soe.rutgers.edu/gset";
     String linkDomain = "soe.rutgers.edu/gset";

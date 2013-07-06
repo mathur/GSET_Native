@@ -29,7 +29,7 @@ public class MyMediaPlayerActivity extends Activity {
     AssetManager assets; //Assets (Compiled with APK)
     Music track; //currently loaded track
     Button btnPlay; //The play button will need to change from 'play' to 'pause', so we need an instance of it
-    boolean isTuning; //is user currently jammin out, if so automatically start playing the next track
+    boolean isTuning; //is user currently jamming out, if so automatically start playing the next track
     int currentTrack; //index of current track selected
     int type; //0 for loading from assets, 1 for loading from SD card
 

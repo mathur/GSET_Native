@@ -65,18 +65,6 @@ public class WebActivity extends Activity {
             webView.getSettings().setAppCacheEnabled(true);
             webView.getSettings().setCacheMode(WebSettings.LOAD_NO_CACHE);
 
-            // Enable downloads of files within webView
-            webView.setDownloadListener(new DownloadListener() {
-                public void onDownloadStart(String url, String userAgent,
-                                            String contentDisposition, String mimetype,
-                                            long contentLength) {
-                    Intent i = new Intent(Intent.ACTION_VIEW);
-                    i.setData(Uri.parse(url));
-                    startActivity(i);
-                }
-            });
-
-
             // Attach the ProgressBar layout
             loadingProgressBar = (ProgressBar) findViewById(R.id.progressbar_Horizontal);
 

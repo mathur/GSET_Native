@@ -24,7 +24,5 @@ public class VideoplayerActivity extends Activity {
         videoView.requestFocus();
 
         videoView.start();
-
-
     }
 }

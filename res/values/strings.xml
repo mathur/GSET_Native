@@ -17,4 +17,5 @@
     <string name="action_reload">Refresh</string>
     <string name="title_activity_contact">Contacts</string>
     <string name="title_activity_video">Video Player</string>
+
 </resources>

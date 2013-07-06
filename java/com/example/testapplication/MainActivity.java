@@ -58,7 +58,7 @@ public class MainActivity extends Activity {
      * Called when the user clicks the Video Player button
      */
     public void startVideoplayer(View view) {
-        Intent intent = new Intent(this, ContactListActivity.class);
+        Intent intent = new Intent(this, VideoplayerActivity.class);
         startActivity(intent);
     }
 

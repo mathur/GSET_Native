@@ -10,7 +10,6 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-import android.webkit.DownloadListener;
 import android.webkit.WebChromeClient;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
@@ -92,7 +91,6 @@ public class WebActivity extends Activity {
 
                 @Override
                 public boolean shouldOverrideUrlLoading(WebView view, String url) {
-
 
                     // If the site/domain matches, do not override; let myWebView load the page
                     if (Uri.parse(url).getHost().equals(linkDomain)) {

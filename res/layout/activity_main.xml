@@ -56,4 +56,14 @@
             android:layout_alignLeft="@+id/btnWebsite"
             android:layout_alignRight="@+id/btnWebsite"
             android:onClick="startContacts"/>
+
+    <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Video Player"
+            android:id="@+id/btnVideoPlayer"
+            android:layout_below="@+id/btnContacts"
+            android:layout_alignParentRight="true"
+            android:layout_alignLeft="@+id/btnContacts"
+            android:onClick="startVideoplayer"/>
 </RelativeLayout>

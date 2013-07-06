@@ -17,8 +17,26 @@
                 android:orientation="vertical"
                 android:layout_alignParentTop="true"
                 android:layout_alignParentLeft="true"
-                android:layout_width="fill_parent"
-                android:layout_height="0dip">
+                android:layout_width="wrap_content"
+                android:layout_height="0dip"
+                android:layout_gravity="center">
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="Testing Application"
+                    android:id="@+id/textView"
+                    android:layout_gravity="center"/>
+
+            <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="For NJ GSET 2013"
+                    android:id="@+id/textView2"/>
+
         </LinearLayout>
     </LinearLayout>
+
 </RelativeLayout>

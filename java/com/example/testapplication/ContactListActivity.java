@@ -23,14 +23,6 @@ public class ContactListActivity extends ListActivity {
         setListAdapter(adapter);
     }
 
-    @Override
-    protected void onListItemClick(ListView l, View v, int position, long id) {
-        super.onListItemClick(l, v, position, id);
-        Object o = this.getListAdapter().getItem(position);
-        Contact c = (Contact) o;
-        Toast.makeText(this, c.getDisplayName(), Toast.LENGTH_SHORT).show();
-    }
-
     private ContactList getContacts() {
         ContactList contactList = new ContactList();
         Uri uri = ContactsContract.Contacts.CONTENT_URI;

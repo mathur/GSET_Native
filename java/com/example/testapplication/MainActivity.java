@@ -63,7 +63,7 @@ public class MainActivity extends Activity {
     }
 
     /**
-     * Called when the user clicks the Video Player button
+     * Called when the user clicks the Processing Speed button
      */
     public void startProcSpeed(View view) {
         Intent intent = new Intent(this, ProcessingSpeedActivity.class);

@@ -12,31 +12,118 @@
             android:layout_height="fill_parent"
             android:weightSum="7">
 
-        <LinearLayout
-                android:layout_weight="6"
-                android:orientation="vertical"
-                android:layout_alignParentTop="true"
-                android:layout_alignParentLeft="true"
+        <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="-----------------------------------------------------------"
+                android:id="@+id/textView11"
+                android:paddingBottom="5dp"
+                android:paddingTop="5dp"/>
+
+        <TextView
                 android:layout_width="wrap_content"
-                android:layout_height="0dip"
-                android:layout_gravity="center">
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Application created by:"
+                android:id="@+id/textView"
+                android:layout_gravity="left|center_vertical"
+                android:padding="7dp"/>
 
-            <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textAppearance="?android:attr/textAppearanceLarge"
-                    android:text="Testing Application"
-                    android:id="@+id/textView"
-                    android:layout_gravity="center"/>
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Rohan Mathur"
+                android:id="@+id/textView2"
+                android:layout_gravity="left|center_vertical"
+                android:paddingLeft="15dp"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"/>
 
-            <TextView
-                    android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
-                    android:textAppearance="?android:attr/textAppearanceLarge"
-                    android:text="For NJ GSET 2013"
-                    android:id="@+id/textView2"/>
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Kavin Sivakumar"
+                android:id="@+id/textView3"
+                android:layout_gravity="left|center_vertical"
+                android:paddingLeft="15dp"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"/>
 
-        </LinearLayout>
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Jonathan Vielstich"
+                android:id="@+id/textView4"
+                android:layout_gravity="left|center_vertical"
+                android:paddingLeft="15dp"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"/>
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Vivian Mo"
+                android:id="@+id/textView5"
+                android:layout_gravity="left|center_vertical"
+                android:paddingLeft="15dp"
+                android:paddingTop="5dp"
+                android:paddingBottom="10dp"/>
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="-----------------------------------------------------------"
+                android:id="@+id/textView10"
+                android:layout_gravity="right|center_vertical"
+                android:paddingBottom="5dp"
+                android:paddingTop="5dp"/>
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="For NJ GSET 2013"
+                android:id="@+id/textView6"
+                android:layout_gravity="center"
+                android:password="false"
+                android:padding="15dp"/>
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Project Mentor: Dr. Vinod Ganapathy"
+                android:id="@+id/textView7"
+                android:layout_gravity="center"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"/>
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Project RTA: Neha Desai"
+                android:id="@+id/textView8"
+                android:layout_gravity="center"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"/>
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="-----------------------------------------------------------"
+                android:id="@+id/textView9"
+                android:layout_gravity="left|center_vertical"
+                android:paddingBottom="5dp"
+                android:paddingTop="5dp"/>
+
     </LinearLayout>
 
 </RelativeLayout>

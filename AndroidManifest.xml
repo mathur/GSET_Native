@@ -70,6 +70,14 @@
                     android:name="android.support.PARENT_ACTIVITY"
                     android:value="com.example.testapplication.MainActivity"/>
         </activity>
+        <activity
+                android:name="com.example.testapplication.ProcessingSpeedActivity"
+                android:label="@string/title_activity_proc"
+                android:parentActivityName="com.example.testapplication.MainActivity">
+            <meta-data
+                    android:name="android.support.PARENT_ACTIVITY"
+                    android:value="com.example.testapplication.MainActivity"/>
+        </activity>
     </application>
 
     <uses-feature android:name="android.hardware.camera"/>

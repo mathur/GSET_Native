@@ -66,4 +66,15 @@
             android:layout_alignParentRight="true"
             android:layout_alignLeft="@+id/btnContacts"
             android:onClick="startVideoplayer"/>
+
+    <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Processing Speed"
+            android:id="@+id/btnProcSpeed"
+            android:layout_below="@+id/btnVideoPlayer"
+            android:layout_alignLeft="@+id/btnVideoPlayer"
+            android:layout_alignParentRight="true"
+            android:singleLine="false"
+            android:onClick="startProcSpeed"/>
 </RelativeLayout>

@@ -19,7 +19,7 @@ public class Music implements OnCompletionListener {
             isPrepared = true;
             mediaPlayer.setOnCompletionListener(this);
         } catch (Exception ex) {
-            throw new RuntimeException("Couldn't load music, uh oh!");
+            throw new RuntimeException("Couldn't load music");
         }
     }
 
@@ -31,7 +31,7 @@ public class Music implements OnCompletionListener {
             isPrepared = true;
             mediaPlayer.setOnCompletionListener(this);
         } catch (Exception ex) {
-            throw new RuntimeException("Couldn't load music, uh oh!");
+            throw new RuntimeException("Couldn't load music");
         }
     }
 

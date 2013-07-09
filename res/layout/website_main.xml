@@ -23,7 +23,6 @@
             android:maxHeight="7dip"
             android:background="#00000000"
             android:progressDrawable="@drawable/progress_drawable"
-
             />
 
     <WebView xmlns:android="http://schemas.android.com/apk/res/android"

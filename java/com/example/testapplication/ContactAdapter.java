@@ -41,7 +41,7 @@ public class ContactAdapter extends ArrayAdapter<Contact> {
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
-        View view = null;
+        View view = convertView;
         if (convertView == null) {
             LayoutInflater inflater = _context.getLayoutInflater();
             view = inflater.inflate(R.layout.contactlistitem, null);

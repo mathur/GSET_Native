@@ -10,7 +10,6 @@
     <string name="title_activity_web">Website</string>
     <string name="hello">Hello World!</string>
     <string name="btnIntend">Take Picture</string>
-    <string name="btnIntendV">Take Video</string>
     <string name="cannot">Cannot</string>
     <string name="album_name">CameraSample</string>
     <string name="title_activity_photo">Camera</string>

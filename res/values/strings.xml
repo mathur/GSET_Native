@@ -3,7 +3,7 @@
 
     <string name="app_name">Test Application</string>
     <string name="action_settings">Settings</string>
-    <string name="button_music">Music Player</string>
+    <string name="button_music">Audio Player</string>
     <string name="title_activity_display_message">Test Section</string>
     <string name="title_activity_music_player">Music Player</string>
     <string name="title_activity_about">About</string>

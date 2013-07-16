@@ -229,7 +229,6 @@ public class PhotoIntentActivity extends Activity {
                 savedInstanceState.getBoolean(IMAGEVIEW_VISIBILITY_STORAGE_KEY) ?
                         ImageView.VISIBLE : ImageView.INVISIBLE
         );
-    }
 
     /**
      * Indicates whether the specified action can be used as an intent. This
